@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+
+	<title>Example</title>
+	
+	<!-- link to jquery library -->
+	<script type="text/javascript" src="./jquery/jquery-3.2.1.min.js"></script> 
+	
+	<!-- jQuery code can be put here -->
+	<script type="text/javascript"> 
+		$(document).ready(function(){
+			$("#btn1").click(function(){
+				$("#list1").css({color: 'red'}).delay(200).slideUp(1000);
+			});
+			
+			$("#btn2").click(function(){
+				$("#list1").css({color: 'black'}).slideDown(1000);
+			});	
+				
+			$("#btn3").click(function(){
+				$("#list2").hide();
+			});
+			
+			$("#btn4").click(function(){
+				$("#list2").show();
+				
+			});
+
+		});			
+	</script> 
+</head> 
+<body> 
+	<div> 
+		<h1>jQuery function call to hide and show a list</h1>
+		<ol id ="list1"><b>This is the first list</b>
+			<li>List 1 item 1 </li>
+			<li>List 1 item 2 </li>
+			<li>List 1 item 3 </li>
+		</ol>	
+		<ol id ="list2"><b>This is the second list</b>
+			<li>List 2 item 1 </li>
+			<li>List 2 item 2 </li>
+			<li>List 2 item 3 </li>
+		</ol>		
+		
+		<br />
+		<br />
+		<button id="btn1">Click to hide first list</button>
+		<br />
+		<br />
+		<button id="btn2">Click to show first list</button>
+		<br />
+		<br />
+		<button id="btn3">Click to hide second list</button>
+		<br />
+		<br />
+		<button id="btn4">Click to show second list</button>
+		
+		
+		
+		
+		
+	</div> 
+</body> 
+</html>
